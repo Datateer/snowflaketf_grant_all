@@ -55,6 +55,8 @@ resource "snowflake_table_grant" "this" {
   depends_on = [
     data.snowflake_tables.this
   ]
+  
+  enable_multiple_grants = var.enable_multiple_grants
 }
 
 resource "snowflake_view_grant" "this" {
@@ -71,6 +73,8 @@ resource "snowflake_view_grant" "this" {
   depends_on = [
     data.snowflake_views.this
   ]
+  
+  enable_multiple_grants = var.enable_multiple_grants
 }
 
 resource "snowflake_stage_grant" "this" {
@@ -86,5 +90,7 @@ resource "snowflake_stage_grant" "this" {
   depends_on = [
     data.snowflake_stages.this
   ]
+  
+  enable_multiple_grants = var.enable_multiple_grants
 }
 
