@@ -45,6 +45,6 @@ variable "shares" {
 
 variable "enable_multiple_grants" {
   description = "Enable grants that are not managed by terraform"
-  type        = boolean
+  type        = bool
   default     = false
 }
